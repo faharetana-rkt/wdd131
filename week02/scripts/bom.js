@@ -16,5 +16,8 @@ addButton.addEventListener("click", () => {
     });
     favchap.value = "";
     favchap.focus();
+  } else {
+    alert("Please enter a scripture!");
+    favchap.focus();
   }
 });
