@@ -1,0 +1,110 @@
+/*Link to coolor palette https://coolors.co/palette/ee6055-60d394-aaf683-ffd97d-ff9b85*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header p,
+header nav,
+h1,
+footer {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+figcaption {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header {
+  background-color: #ff9b85;
+
+  padding: 1rem;
+}
+
+nav a {
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+}
+
+a:hover {
+  background-color: #ffd97d;
+  border-radius: 3px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* small view navigation */
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: #edede9;
+  color: #000;
+  position: absolute;
+  top: 15px;
+  left: 90%;
+  border-radius: 2px;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "X";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #ff9b85;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  min-width: 200px;
+  max-width: 450px;
+  padding: 0.5rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+#lastModified {
+    color: #002029;
+    font-weight: bold;
+}
