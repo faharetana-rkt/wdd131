@@ -7,6 +7,7 @@
 
 header p,
 header nav,
+h2,
 h1,
 footer {
   font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
@@ -17,7 +18,7 @@ figcaption {
   text-align: center;
 }
 
-header p {
+h1 {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -71,7 +72,7 @@ nav {
   display: block;
 }
 
-h1 {
+h2 {
   text-align: center;
   padding: 1rem;
 }
