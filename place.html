@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Faharetana Rakotomamonjy" />
+    <meta
+      name="description"
+      content="This is the page for presenting Madagascar"
+    />
+    <title>Country - Madagascar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/place.css" rel="stylesheet" />
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Madagascar</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="hero-img">
+      <picture class="hero-img">
+        <source srcset="images/baobab-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/baobab-small.webp" media="(min-width: 500px)">
+        <img src="images/baobab-smaller.webp" alt="Image of baobab trees" width="500" height="752">
+      </picture>
+              </div>
+      <div class="data">
+        <h2>Data</h2>
+        <div class="left">
+            <p>Area:</p>
+            <p>Population:</p>
+            <p>Capital:</p>
+            <p>Languages:</p>
+            <p>Currency:</p>
+            <p>Time Zone:</p>
+            <p>Calling code:</p>
+            <p>Internet TLI:</p>
+        </div>
+        <div class="right">
+            <p>587 041 km²</p>
+            <p>32,777,370</p>
+            <p>Antananarivo</p>
+            <p>Malagasy, French</p>
+            <p>Malagasy Ariary (MGA)</p>
+            <p>UTC + 3</p>
+            <p>+261</p>
+            <p>.mg</p>
+        </div>
+      </div>
+      <div class="weather">
+        <h2>Weather</h2>
+        <img src="images/sunny.svg" alt="Icon of sunny weather">
+        <div class="left">
+            <p>Temperature:</p>
+            <p>Conditions:</p>
+            <p>Wind:</p>
+            <p>Wind Chill:</p>
+        </div>
+        <div class="right">
+            <p id="temp">10 °C</p>
+            <p>Sunny</p>
+            <p id="wind">5 km/h</p>
+            <p id="wind-chill"></p>
+        </div>
+      </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <span id="year"></span> ✈️ Rakotomamonjy Faharetana Andriatsiva ✈️
+        Madagascar
+      </p>
+      <p>Last modified on: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
