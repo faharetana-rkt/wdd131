@@ -65,21 +65,21 @@ const temples = [
   },
   // Add more temple objects here...
   {
-    templeName: "Accra Ghana Temple",
+    templeName: "Accra Ghana",
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
     area: 215278,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13745-thumb.jpg",
   },
   {
-    templeName: "Nashville Tennessee Temple",
+    templeName: "Nashville Tennessee",
     location: "Nashville, Tennesse, United States",
     dedicated: "2000, May, 21",
     area: 215278,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nashville-tennessee-temple/nashville-tennessee-temple-50097.jpg",
   },
   {
-    templeName: "Oakland California Temple",
+    templeName: "Oakland California",
     location: "Oakland, California, United States",
     dedicated: "1964, November, 17",
     area: 753474,
@@ -87,22 +87,76 @@ const temples = [
   },
 ];
 
-const cardContainer = document.querySelector(".img-container");
 
-function renderTemple(temple) {
-    const templeName = document.createElement("h3").innerHTML = temple.templeName;
-    const location = document.createElement("p").innerHTML = `Location: ${temple.location}`;
-    const dedicated = document.createElement("p").innerHTML = `Dedicated: ${temple.dedicated}`;
+
+// function renderTemple(temple) {
+//     const templeName = document.createElement("h3").innerHTML = temple.templeName;
+//     const location = document.createElement("p").innerHTML = `Location: ${temple.location}`;
+//     const dedicated = document.createElement("p").innerHTML = `Dedicated: ${temple.dedicated}`;
+//     const size = document.createElement("p").innerHTML = `Size: ${temple.area} sq ft`;
+//     const card = document.createElement("div");
+//     card.classList.add("card");
+//     const templeImage = document.createElement("img");
+//     templeImage.setAttribute("alt", `This is the image of ${temple.templeName}`);
+//     templeImage.setAttribute("src", `${temple.imageUrl}`);
+//     templeImage.setAttribute("loading", "lazy");
+//     card.appendChild(templeName);
+//     card.appendChild(location);
+//     card.appendChild(dedicated);
+//     card.appendChild(size);
+//     card.appendChild(templeImage);
+//     cardContainer.appendChild(card);
+// }
+
+function renderTemple(temples) {
+  const cardContainer = document.querySelector(".img-container");
+  cardContainer.innerHTML = "";
+  temples.forEach((temple) => {
     const card = document.createElement("div");
     card.classList.add("card");
-    const templeImage = document.createElement("img");
-    templeImage.setAttribute("alt", `This is the image of ${temple.templeName}`);
-    templeImage.setAttribute("src", `${temple.imageUrl}`);
-    card.appendChild(templeName);
-    card.appendChild(location);
-    card.appendChild(dedicated);
-    card.appendChild(templeImage);
+    card.innerHTML = `<h3>${temple.templeName}</h3>
+                      <p><span class="label">Location:</span> ${temple.location}</p>
+                      <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
+                      <p><span class="label">Size:</span> ${temple.area} sq ft<p>
+                      <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy">`;
     cardContainer.appendChild(card);
+  });
 }
 
+renderTemple(temples);
 
+const home = document.querySelector("#home");
+const old = document.querySelector("#old");
+const later = document.querySelector("#new");
+const large = document.querySelector("#large");
+const small = document.querySelector("#small");
+
+home.addEventListener("click", () => {
+  renderTemple(temples);
+  const h2 = document.querySelector("h2");
+  h2.innerHTML = "Home";
+})
+
+old.addEventListener("click", () => {
+  renderTemple(temples.filter(temple => parseInt(temple.dedicated.slice(0, 4)) < 1900));
+  const h2 = document.querySelector("h2");
+  h2.innerHTML = "Old temples built before 1900";
+})
+
+later.addEventListener("click", () => {
+  renderTemple(temples.filter(temple => parseInt(temple.dedicated.slice(0, 4)) > 2000));
+   const h2 = document.querySelector("h2");
+   h2.innerHTML = "New temples built after 2000";
+})
+
+large.addEventListener("click", () => {
+  renderTemple(temples.filter(temple => temple.area > 90000));
+  const h2 = document.querySelector("h2");
+  h2.innerHTML = "Large temples over 90000 sq ft";
+})
+
+small.addEventListener("click", () => {
+  renderTemple(temples.filter(temple => temple.area < 10000));
+  const h2 = document.querySelector("h2");
+  h2.innerHTML = "Small temples below 10000 sq ft";
+})

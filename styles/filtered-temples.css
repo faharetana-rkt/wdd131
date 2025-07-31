@@ -9,13 +9,27 @@ header p,
 header nav,
 h2,
 h1,
-footer {
+footer,
+h3 
+{
   font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
 }
 
-figcaption {
+.label {
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+.card p {
+  font-size: 0.8rem;
 }
 
 h1 {
@@ -85,10 +99,13 @@ footer {
   margin-top: 1rem;
 }
 
-figure {
+.card {
   min-width: 200px;
   max-width: 450px;
   padding: 0.5rem;
+  border: solid 1px black;
+  background-color: #fff9ec;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -97,6 +114,7 @@ main {
 
 img {
   width: 100%;
+  padding: 0.3rem;
 }
 
 .img-container {
