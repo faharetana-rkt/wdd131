@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Faharetana Rakotomamonjy" />
+    <meta name="description" content="This is the product review form page" />
+    <title>Product Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/form.css" rel="stylesheet" />
+    <link href="styles/form-large.css" rel="stylesheet" />
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Product Review</h1>
+    </header>
+    <main>
+      <form method="get" action="review.html" class="wfProductReview">
+        <label class="separation">Product name
+          <select name="products" id="products" required>
+            <option value="" disabled selected>Choose your Product...</option>
+          </select>
+        </label>
+        <div>Overall Rating</div>
+        <label><input type="radio" name="rating" id="star1" required/>  ⭐</label>
+        <label><input type="radio" name="rating" id="star2" required/>  ⭐⭐</label>
+        <label><input type="radio" name="rating" id="star3" required/>  ⭐⭐⭐</label>
+        <label><input type="radio" name="rating" id="star4" required/>  ⭐⭐⭐⭐</label>
+        <label><input type="radio" name="rating" id="star5" required/>  ⭐⭐⭐⭐⭐</label>
+        <label class="separation">Date of Installation<input type="date" id="date" name="date" required></label>
+        <div>Which features did you find useful? <span id="italic">(Check all that apply)</span></div>
+        <label><input type="checkbox" id="comfortable" name="comfortable" value="comfortable">  Comfortable</label>
+        <label><input type="checkbox" id="design" name="design" value="design">  Design</label>
+        <label><input type="checkbox" id="easy" name="easy" value="easy">  Easy to use</label>
+        <label><input type="checkbox" id="sturdy" name="sturdy" value="sturdy">  Sturdy</label>
+        <label class="separation">Written Review <span class="optional">(optional)</span><textarea id="writtenReview" name="writtenReview" rows="7">Share your review here</textarea></label>
+        <label class="separation">Your name <span class="optional">(optional)</span><input type="text" id="name" name="name"></label>
+        <input type="submit" value="Send my review">
+      </form>
+    </main>
+    <footer>
+      <p>
+        <span id="year"></span> ✈️ Rakotomamonjy Faharetana Andriatsiva ✈️
+        Madagascar
+      </p>
+      <p>Last modified on: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>

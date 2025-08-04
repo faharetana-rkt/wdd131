@@ -1,0 +1,110 @@
+/*Link to coolor palette https://coolors.co/palette/413c3e-fff8e7-9fbd25-fefefa-4c4c4c*/
+* {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+header {
+  height: auto;
+  background-color: #9fbd25;
+}
+
+h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+main {
+    max-width: 95%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  background-color: #9fbd25;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+footer p, #year, #lastModified {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+#lastModified {
+  color: #722EA5;
+  font-weight: bold;
+}
+
+/* FORM STYLING */
+.wfProductReview label {
+    display: block;
+}
+
+.wfProductReview {
+    background-color: #FFF8E7;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.wfProductReview textarea, .wfProductReview input[type="text"], .wfProductReview input[type="date"],
+.wfProductReview select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.wfProductReview label, .wfProductReview div {
+    font-weight: bold;
+}
+
+.wfProductReview div, .wfProductReview .separation {
+    margin-top: 15px;
+}
+
+.wfProductReview input[type="radio"], .wfProductReview input[type="checkbox"] {
+   margin-right: 5px;
+}
+
+.wfProductReview input[type="submit"] {
+    margin: 20px 0;
+    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.2rem;
+    padding: 7.5px;
+    background-color: #413C3E;
+    color: white;
+}
+
+.wfProductReview .optional {
+    color: navy;
+}
+
+#italic {
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Thank you page */
+.messageh2 
+{
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.thanks-img {
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
