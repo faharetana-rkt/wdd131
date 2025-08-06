@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  font-family: Lato, Helvetica, Arial;
+  font-family: Roboto, Helvetica, Arial;
   box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: Aleo, Georgia, "Times New Roman";
+  font-family: Orbitron, Georgia, "Times New Roman";
 }
 
 h1,
