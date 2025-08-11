@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Faharetana Rakotomamonjy" />
+    <meta
+      name="description"
+      content="This is the final project homepage for WDD 131 Air Find - Dynamic Web Fundamentals by Rakotomamonjy Faharetana Andriatsiva"
+    />
+    <title>Air Find</title>
+    <button id="menu" aria-label="open close menu"></button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="styles/project.css" rel="stylesheet" />
+    <link href="styles/project-large.css" rel="stylesheet" />
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="header-logo"
+        ><img src="images/logo.webp" alt="logo for air find" loading="lazy"
+      /></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Register</a>
+        <a href="search.html">Search 🔍</a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="search-h1">Search for your aircraft below</h1>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined"> search </span>
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search aircraft"
+        />
+      </div>
+      <div class="search-terms">
+        <p>
+          Due to API Limitation, please use these terms in the search bar to
+          show the aircrafts.
+        </p>
+        <p>
+          <span class="emphasis">Fighter Jets:</span> F-22, F35, F16, F15, F15E,
+          F18, F18E / F18F, EUFI, RAFA, SU57, SU35, MIG29, MIG31, J39, A10
+        </p>
+        <p>
+          <span class="emphasis">Commercial Planes:</span> A320, A21N, A359,
+          A35K, A388, B738, B38M, B744, B748, B752, B763, B77W, B789
+        </p>
+      </div>
+    </main>
+    <footer>
+      <img
+        src="images/icon.webp"
+        alt="icon of a F-22 raptor"
+        class="icon"
+        loading="lazy"
+      />
+      <div class="footer-text">
+        <p>
+          <span id="year"></span> Rakotomamonjy Faharetana Andriatsiva
+          Madagascar
+        </p>
+        <p>Last modified on: <span id="lastModified"></span></p>
+      </div>
+      <img
+        src="images/icon.webp"
+        alt="icon of a F-22 raptor"
+        class="icon"
+        loading="lazy"
+      />
+    </footer>
+  </body>
+</html>

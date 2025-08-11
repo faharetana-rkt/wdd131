@@ -5,3 +5,10 @@ hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("open");
 });
 
+
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    console.log(searchInput.value);
+  }
+});
