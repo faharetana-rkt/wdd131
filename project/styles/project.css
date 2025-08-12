@@ -6,6 +6,7 @@
   --navy: #03045e;
   --turquoise: #48cae4;
   --light: #ade8f4;
+  --alert: #ffa69e;
   --heading-font: Orbitron, Georgia, "Times New Roman";
   --paragraph-font: Roboto, Helvetica, Arial;
 }
@@ -188,4 +189,36 @@ footer {
     text-align: center;
     font-family: var(--heading-font);
     margin-top: 2rem;
+}
+
+.search-terms p{
+  padding: 0.3rem;
+}
+
+.aircraft-img {
+  margin-top: 2rem;
+}
+
+#alert {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--alert);
+  clip-path: polygon(
+    0% 0%,
+    /* top-left corner */ 95% 0%,
+    /* top edge before cut */ 100% 15%,
+    /* top-right cut */ 100% 100%,
+    /* bottom-right corner */ 15% 100%,
+    /* bottom edge before cut */ 0% 100% /* bottom-left */
+  );
+  font-family: var(--heading-font);
+}
+
+.aircraft-img img {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.aircraft-img p {
+  text-align: center;
 }

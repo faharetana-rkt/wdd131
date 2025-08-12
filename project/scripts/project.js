@@ -25,20 +25,41 @@ const aircrafts = [
   {"Hex_Code":"4B1234","ICAO_Code":"EUFI","Aircraft_Name":"Eurofighter Typhoon (Luftwaffe)"}
 ];
 
-const url = "https://api.planespotters.net/pub/photos/hex/4B1234";
+const searchInput = document.querySelector(".search-input");
+const codes = document.querySelector("#hex-codes");
+const codeArray = [];
+aircrafts.forEach(aircraft => {
+  let hex = aircraft.Hex_Code;
+  codeArray.push(hex);
+});
+codes.innerHTML = `${codeArray.join(", ")}`;
+
+const url = "https://api.planespotters.net/pub/photos/hex/";
+const imageContainer = document.querySelector('.aircraft-img');
 
 async function fetchAircraftImage(url) {
   const response = await fetch(url);
   const data = await response.json();
-  //displayAircraft(data);
-  console.log(data);
+  displayAircraft(data);
+  // console.log(data);
 };
 
-fetchAircraftImage(url);
+// fetchAircraftImage(url);
 
-const searchInput = document.querySelector(".search-input");
+function displayAircraft(data) {
+  searchInput.value = "";
+  imageContainer.innerHTML = "";
+  imageContainer.innerHTML = `<img src="${data.photos[0].thumbnail_large.src}" alt="aircraft photo taken by ${data.photos[0].photographer}" loading="lazy">
+                              <p><em>Photograph taken by ${data.photos[0].photographer}</em></p>`;
+}
+
 searchInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    console.log(searchInput.value);
+    if (codeArray.includes(searchInput.value)) {
+      let urlApi = `${url}${searchInput.value}`;
+      fetchAircraftImage(urlApi);
+    } else {
+      imageContainer.innerHTML = `<h3 id="alert">❗❗❗ Please use the provided code above ⚠️⚠️⚠️</h3>`;
+    }
   }
 });
