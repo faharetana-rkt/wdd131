@@ -9,7 +9,6 @@
       content="This is the final project homepage for WDD 131 Air Find - Dynamic Web Fundamentals by Rakotomamonjy Faharetana Andriatsiva"
     />
     <title>Air Find</title>
-    <button id="menu" aria-label="open close menu"></button>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,19 +23,35 @@
   </head>
   <body>
     <header>
+      <button id="menu" aria-label="open close menu"></button>
       <a href="index.html" id="header-logo"
         ><img src="images/logo.webp" alt="logo for air find" loading="lazy"
       /></a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="register.html">Register</a>
         <a href="search.html">Search 🔍</a>
+        <a href="subscribe.html">Subscribe</a>
       </nav>
     </header>
     <main>
-      <h1>Please fill the form below to receive daily news and images of aircraft.</h1>
-      <form action="get" target="thanks.html" class="webform-reg">
-        
+      <h1 class="subscribe-h1">
+        Please fill the form below to receive daily news and images of aircraft.
+      </h1>
+      <form method="get" action="thanks.html" class="webform-reg">
+        <label>First Name* <input type="text" name="fname" required /></label>
+        <label>Last Name* <input type="text" name="lname" required /></label>
+        <label>Email* <input type="email" name="email" required /></label>
+        <label>Favorite Aircraft <input type="text" /></label>
+        <div>Content type</div>
+        <label class="check"
+          ><input type="checkbox" name="fighter" value="aircraft-type" />
+          Fighter Jet</label
+        >
+        <label class="check"
+          ><input type="checkbox" name="commercial" valye="aircraft-type" />
+          Commercial Jet</label
+        >
+        <input type="submit" value="Subscribe" />
       </form>
     </main>
     <footer>

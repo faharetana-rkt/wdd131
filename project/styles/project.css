@@ -172,7 +172,7 @@ footer {
 .search-input {
   font-size: 1.3rem;
   font-family: var(--paragraph-font);
-  color: #333333;
+  color: black;
   margin-left: 1rem;
   outline: none;
   border: none;
@@ -182,7 +182,7 @@ footer {
 
 .search-input::placeholder,
 .search-icon {
-  color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.60);
 }
 
 .search-h1 {
@@ -221,4 +221,73 @@ footer {
 
 .aircraft-img p {
   text-align: center;
+}
+
+/* FORM STYLING */
+.webform-reg {
+  width: 420px;
+  background-color: var(--background-color);
+  margin: 2rem auto;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.webform-reg input[type="text"], .webform-reg input[type="email"] {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.webform-reg label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.webform-reg input[type="submit"] {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(var(--dark), var(--navy));
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px var(--navy);
+}
+
+.webform-reg input[type="checkbox"] {
+  margin-right: 0.3rem;
+  padding: 0.1rem 0;
+}
+
+.webform-reg .check {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.webform-reg div {
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.subscribe-h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  margin-top: 2rem;
+}
+
+/* Thanks page */
+.bye {
+  width: 40%;
+  display: block;
+  margin: 1rem auto;
 }

@@ -9,7 +9,6 @@
       content="This is the final project homepage for WDD 131 Air Find - Dynamic Web Fundamentals by Rakotomamonjy Faharetana Andriatsiva"
     />
     <title>Air Find</title>
-    <button id="menu" aria-label="open close menu"></button>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,16 +24,18 @@
     <link href="styles/project-large.css" rel="stylesheet" />
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/project.js" defer></script>
+    <script src="scripts/search.js" defer></script>
   </head>
   <body>
     <header>
+      <button id="menu" aria-label="open close menu"></button>
       <a href="index.html" id="header-logo"
         ><img src="images/logo.webp" alt="logo for air find" loading="lazy"
       /></a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="register.html">Register</a>
         <a href="search.html">Search 🔍</a>
+        <a href="subscribe.html">Subscribe</a>
       </nav>
     </header>
     <main>
@@ -53,7 +54,8 @@
           show the aircrafts <em>(We recommend copying and pasting)</em>.
         </p>
         <p>
-          <span class="emphasis">Aircrafts Code:</span> <span id="hex-codes"></span>
+          <span class="emphasis">Aircrafts Code:</span>
+          <span id="hex-codes"></span>
         </p>
       </div>
       <div class="aircraft-img"></div>
